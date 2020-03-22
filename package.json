@@ -1,0 +1,18 @@
+{
+  "author": "ZLY",
+  "name": "koa-project",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "start": "node app"
+  },
+  "dependencies": {
+    "art-template": "^4.13.2",
+    "koa": "^2.11.0",
+    "koa-art-template": "^1.1.1",
+    "koa-bodyparser": "^4.2.1",
+    "koa-router": "^8.0.8",
+    "koa-static": "^5.0.0"
+  },
+  "devDependencies": {}
+}
