@@ -9,6 +9,15 @@ const koa=require('koa'),
 
       app = new koa;
 
+//写一个中间件配置公共的信息
+app.use(async (ctx,next)=>{
+  //公共的数据放在state里面，这样的话在模板的任何地方都可以使用（直接username使用）
+  ctx.state.username='zly';
+  await next();/*继续向下匹配路由*/
+})
+
+
+
 //引入路由子模块
 const admin = require("./routes/admin/index");
 const front = require("./routes/front/index");
