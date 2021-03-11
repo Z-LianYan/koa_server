@@ -34,8 +34,9 @@ render(app, {
 
 
 //配置静态web服务的中间件
-app.use(static(__dirname));
-// app.use(static(__dirname +'/public'));//将目录public配置到3000端口下
+// app.use(static(__dirname));
+console.log("__dirname",__dirname)
+app.use(static(__dirname +'/public'));//将目录public配置到8008端口下 （访问：http://localhost:8008/images/img.jpeg public文件下的images）
 
 app.use(bodyparser())//处理前端提交过来数据
 
