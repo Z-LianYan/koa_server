@@ -4,9 +4,44 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
+    <title>我的图片收藏-首页</title>
 </head>
+<style>
+    body{
+        margin: 0;
+        display: flex;
+        flex-flow: column;
+        min-height: 1000px;
+        text-align: center;
+    }
+    .content{
+    }
+    .content .wrapper{
+        
+    }
+    .content .wrapper .img{
+        width: 100%;
+    }
+    .footer{
+        height: 50px;
+        border-top: 1px solid #ccc;
+        line-height: 50px;
+    }
+</style>
 <body>
-    <h1>{{title}}</h1>
+    <!-- <h1>{{title+imgs[0].url}}</h1> -->
+        
+    <div class="content">
+        <%for(var i=0;i<imgs.length;i++){%>
+            <div class="wrapper">
+                <img src="<%=imgs[i].url%>" alt="" class="img">
+                <p class="txt"><%=imgs[i].name%></p>
+            </div>
+            
+        <%}%>
+    </div>
+    <a href="http://www.beian.gov.cn" class="footer">
+        粤ICP备20036510号-1
+    </a>
 </body>
 </html>
